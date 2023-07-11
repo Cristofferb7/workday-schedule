@@ -25,6 +25,16 @@ $("#currentDay").html(todayDate);
       localStorage.setItem(time, text);
   })
 
+  function timeTracker() {
+    //get current number of hours.
+    var timeNow = moment().hour();
+
+        // loop over time blocks
+        $(".time-block").each(function () {
+          var blockTime = parseInt($(this).attr("id").split("hour")[1]);
+
+  
+
 
   //
   // TODO: Add code to apply the past, present, or future class to each time
