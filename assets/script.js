@@ -14,6 +14,18 @@ $("#currentDay").html(todayDate);
   // function? How can DOM traversal be used to get the "hour-x" id of the
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
+
+    // saveBtn click listener 
+    $(".saveBtn").on("click", function () {
+      // Get nearby values of the description in JQuery
+      var text = $(this).siblings(".description").val();
+      var time = $(this).parent().attr("id");
+
+      //  local storage
+      localStorage.setItem(time, text);
+  })
+
+
   //
   // TODO: Add code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour. HINTS: How can the id
